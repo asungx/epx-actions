@@ -4,6 +4,9 @@
   "description": "Custom GitHub Actions",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -fr build/",
+    "build": "npx tsc",
+    "start": "npm run build && node ./build/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/asungx/epx-actions/issues"
   },
-  "homepage": "https://github.com/asungx/epx-actions#readme"
+  "homepage": "https://github.com/asungx/epx-actions#readme",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
 }
